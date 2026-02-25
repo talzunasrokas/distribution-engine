@@ -79,7 +79,7 @@ function UploadZone({
   dropRef,
 }: {
   phase: Phase;
-  dropRef: React.RefObject<HTMLDivElement>;
+  dropRef: React.RefObject<HTMLDivElement | null>;
 }) {
   const isDragging = phase === "dragging";
   const isDone     = phase === "done";
@@ -727,7 +727,7 @@ function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 /* ── Platform Section ────────────────────────────────────── */
-function PlatformSection({ phase, platformGridRef }: { phase: Phase; platformGridRef?: React.RefObject<HTMLDivElement> }) {
+function PlatformSection({ phase, platformGridRef }: { phase: Phase; platformGridRef?: React.RefObject<HTMLDivElement | null> }) {
   const isDone = phase === "done";
 
   return (
